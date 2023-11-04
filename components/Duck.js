@@ -2,7 +2,7 @@
 import styles from './Duck.module.scss';
 import { useState, useEffect } from 'react';
 import {gsap} from 'gsap';
-import { Draggable } from 'gsap/all';
+import { Draggable } from 'gsap/dist/all';
 gsap.registerPlugin(Draggable) 
 
 
