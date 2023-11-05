@@ -10,7 +10,7 @@ export const GameContext = createContext();
 export default function Home() {
 	const [misses, setMisses] = useState(0);
 
-    function missedShot() {
+    function missedShot(event) {
 		if (!event.target.classList.contains('duck')) {
 			// Do something when clicking on the parent, not on the specific child element
 			setMisses((prevState) => prevState + 1);
