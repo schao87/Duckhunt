@@ -12,9 +12,9 @@ export default function Home() {
 	const [hits, setHits] = useState(0);
 
     function shotCounter(event) {
-		if (!event.target.classList.contains('duck')) {
+		if (event.target.id === 'gamecontainer') {
 			setMisses((prevState) => prevState + 1);
-		  }else if(event.target.classList.contains('duck')){
+		  }else if(event.target.id === 'duck'){
 			setHits((prevState) => prevState + 1);
 		  }
         

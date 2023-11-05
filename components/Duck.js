@@ -14,7 +14,7 @@ export default function Duck(){
 
 
     return(
-        <div id="duck" className={`${styles.duck} duck`}>
+        <div id="duck" className={styles.duck}>
         
         </div>
     )
