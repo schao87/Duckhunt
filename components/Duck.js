@@ -7,15 +7,15 @@ gsap.registerPlugin(Draggable)
 
 
 export default function Duck(){
-  useEffect(() => {
-    
-  },[])
+    useEffect(() => {
+
+    },[])
 
 
 
-  return(
-    <div id="duck" className={styles.duck}>
-      
-    </div>
-  )
+    return(
+        <div id="duck" className={styles.duck}>
+        
+        </div>
+    )
 }
