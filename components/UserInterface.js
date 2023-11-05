@@ -16,7 +16,7 @@ export default function UserInterface() {
                 <p>Misses</p>
                 <p>{misses}</p>
             </div>
-            <div id="hitcounter" className={styles.miss_counter}>
+            <div id="hitcounter" className={styles.hit_counter}>
                 <p>Hits</p>
                 <p>{hits}</p>
             </div>
