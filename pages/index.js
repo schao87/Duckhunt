@@ -11,7 +11,11 @@ export default function Home() {
 	const [misses, setMisses] = useState(0);
 
     function missedShot() {
-        setMisses((prevState) => prevState + 1);
+		if (!event.target.classList.contains('duck')) {
+			// Do something when clicking on the parent, not on the specific child element
+			setMisses((prevState) => prevState + 1);
+		  }
+        
     }
 	
 	return (
