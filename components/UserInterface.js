@@ -8,12 +8,17 @@ import { GameContext } from '../pages/index';
 gsap.registerPlugin(Draggable);
 
 export default function UserInterface() {
-    const {misses} = useContext(GameContext);
+    const {misses, hits} = useContext(GameContext);
 
     return (
         <div id="userinterface" className={styles.userinterface}>
             <div id="misscounter" className={styles.miss_counter}>
-                {misses}
+                <p>Misses</p>
+                <p>{misses}</p>
+            </div>
+            <div id="hitcounter" className={styles.miss_counter}>
+                <p>Hits</p>
+                <p>{hits}</p>
             </div>
         </div>
     );
