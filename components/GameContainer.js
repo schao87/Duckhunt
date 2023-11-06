@@ -7,7 +7,7 @@ import {gsap} from 'gsap'
 export default function GameContainer(){
     
     return(
-        <div id="gamecontainer" className={styles.gamecontainer} >
+        <div className={`${styles.gamecontainer} gamecontainer`} >
             <Duck />
         </div>
     
