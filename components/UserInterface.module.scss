@@ -1,0 +1,12 @@
+.userinterface{
+  width: 100%;
+  height: 100px;
+  background:#d4d4d4;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+.miss_counter, .hit_counter{
+  text-align: center;
+}

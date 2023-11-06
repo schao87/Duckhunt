@@ -7,7 +7,10 @@
   align-items: center;
 }
 
-
+.game_and_ui_container{
+    width: 800px;
+    height: 580px;
+}
 
 @media (max-width: 600px) {
   .grid {
