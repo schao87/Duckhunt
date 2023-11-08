@@ -66,6 +66,38 @@ export default function Duck(){
       }
 
     useLayoutEffect(() => {
+        // let duck = document.querySelector(".duck")
+
+        // let ctx = gsap.context((context) => {
+        //     getRandomCoordinate()
+        //     positionDuck()
+            
+        //     if(duckPosition === 'left'){
+        //         gsap.to(".duck", {duration:flightTime(), x: randomX, y: randomY})
+        //     }else if(duckPosition === 'right'){
+        //         gsap.to(".duck", {duration:flightTime(), x: randomX, y: randomY})
+        //     }else if(duckPosition === 'above'){
+        //         gsap.to(".duck", {duration:flightTime(), x: randomX, y: randomY})
+        //     }else{
+        //         gsap.to(".duck", {duration:flightTime(), x: randomX, y: -randomY})
+        //     }
+
+            
+        //     context.add("duckShot",() => {
+        //         ctx.kill()
+        //         gsap.to(".duck", {duration:.5, y: 500})
+                
+        //     })
+        // }); // <-- scope (for selector text - only find descendants of this)
+
+        // duck.addEventListener("click", (e) => {
+        //     ctx.duckShot()
+        // })
+
+        // return () => ctx.revert(); // <-- CLEANUP!
+    }, []);
+
+    useEffect(() => {
         let duck = document.querySelector(".duck")
 
         let ctx = gsap.context((context) => {
@@ -75,13 +107,13 @@ export default function Duck(){
             if(duckPosition === 'left'){
                 gsap.to(".duck", {duration:flightTime(), x: randomX, y: randomY})
             }else if(duckPosition === 'right'){
-                gsap.to(".duck", {duration:flightTime(), x: randomX, y: randomY})
+                gsap.to(".duck", {duration:flightTime(), x: -randomX, y: randomY})
             }else if(duckPosition === 'above'){
                 gsap.to(".duck", {duration:flightTime(), x: randomX, y: randomY})
             }else{
                 gsap.to(".duck", {duration:flightTime(), x: randomX, y: -randomY})
             }
-            
+
             
             context.add("duckShot",() => {
                 ctx.kill()
@@ -92,15 +124,11 @@ export default function Duck(){
 
         duck.addEventListener("click", (e) => {
             ctx.duckShot()
+            gsap.delayedCall(2,getRandomCoordinate)
+            gsap.delayedCall(2,positionDuck)
         })
 
         return () => ctx.revert(); // <-- CLEANUP!
-    }, []);
-
-    useEffect(() => {
-       console.log(duckPosition)
-       console.log(randomX)
-       console.log(randomY)
     },[duckPosition])
 
     return(
