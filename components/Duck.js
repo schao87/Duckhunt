@@ -47,7 +47,7 @@ export default function Duck(){
         
         // Determine random position and side
         const sides = ['above', 'below', 'left', 'right'];
-        const randomSide = sides[Math.floor(Math.random() * sides.length)];
+        let randomSide = sides[Math.floor(Math.random() * sides.length)];
         setDuckPosition(randomSide)
         
         // Set random positions based on the selected side
@@ -67,6 +67,8 @@ export default function Duck(){
         // Set the duck's position
         Duck.style.left = randomXPos + 'px';
         Duck.style.top = randomYPos + 'px';
+
+        console.log(duckPosition)
       }
 
     useEffect(() => {
