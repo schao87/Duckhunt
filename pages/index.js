@@ -8,7 +8,7 @@ import {gsap} from 'gsap';
 // export const GameContext = createContext();
 
 export default function Home() {
-	const [ignition, setIgnition] = useState(false)
+
 	const [misses, setMisses] = useState(0);
 	const [hits, setHits] = useState(0);
 	const gameContainerRef = useRef(null);
