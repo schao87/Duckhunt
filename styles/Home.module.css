@@ -11,7 +11,34 @@
     width: 800px;
     height: 580px;
 }
-
+.gamecontainer{
+  background: url(../public/images/bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 800px;
+  height: 480px;
+  position: relative;
+  /* overflow: hidden; */
+}
+.duck{
+  background: url(../public/images/duck.gif);
+  background-size: contain;
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+.userinterface{
+  width: 100%;
+  height: 100px;
+  background:#d4d4d4;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+}
+.miss_counter, .hit_counter{
+  text-align: center;
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
